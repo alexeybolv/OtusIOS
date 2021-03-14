@@ -9,6 +9,7 @@ import SwiftUI
 
 @main
 struct OtusIOS1App: App {
+    
     var body: some Scene {
         WindowGroup {
             ContentView()

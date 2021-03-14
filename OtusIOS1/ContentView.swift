@@ -8,9 +8,30 @@
 import SwiftUI
 
 struct ContentView: View {
+
+    @State private var selection = 0
+
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        TabView(selection: $selection) {
+            DashboardScreenView()
+                .tabItem {
+                    Text("Main")
+                    Image(systemName: "star")
+                }
+                .tag(0)
+            FoodScreenView()
+                .tabItem {
+                    Text("Food")
+                    Image(systemName: "pills")
+                }
+                .tag(1)
+            AboutScreenView()
+                .tabItem {
+                    Text("About")
+                    Image(systemName: "star")
+                }
+                .tag(2)
+        }
     }
 }
 
@@ -19,3 +40,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
