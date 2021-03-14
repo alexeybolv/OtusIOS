@@ -10,9 +10,13 @@ import SwiftUI
 struct DashboardScreenView: View {
 
     @EnvironmentObject var router: Router
+    @State var shouldShowActivityIndicator: Bool = false
 
     var body: some View {
         VStack {
+            ActivityIndicator(startAnimating: $shouldShowActivityIndicator)
+            Spacer()
+                .frame(height: 30.0)
             Text("Start Page")
             Button(action: {
                 router.selection = 1
@@ -23,6 +27,17 @@ struct DashboardScreenView: View {
             .padding()
             .background(Color.pink)
             .foregroundColor(.white)
+            .cornerRadius(8)
+            Spacer()
+                .frame(height: 30.0)
+            Button(action: {
+                shouldShowActivityIndicator.toggle()
+            }) {
+                shouldShowActivityIndicator ? Text("Hide activity") : Text("Show activity")
+            }
+            .padding()
+            .background(Color.yellow)
+            .cornerRadius(8)
         }
     }
 }
