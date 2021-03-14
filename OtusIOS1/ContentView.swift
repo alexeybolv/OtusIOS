@@ -9,26 +9,32 @@ import SwiftUI
 
 struct ContentView: View {
 
-    @State private var selection = 0
+    @EnvironmentObject var router: Router
 
     var body: some View {
-        TabView(selection: $selection) {
+        TabView(selection: $router.selection) {
             DashboardScreenView()
                 .tabItem {
-                    Text("Main")
-                    Image(systemName: "star")
+                    VStack {
+                        Image(systemName: "star")
+                        Text("Main")
+                    }
                 }
                 .tag(0)
             FoodScreenView()
                 .tabItem {
-                    Text("Food")
-                    Image(systemName: "pills")
+                    VStack {
+                        Image(systemName: "pills")
+                        Text("Food")
+                    }
                 }
                 .tag(1)
             AboutScreenView()
                 .tabItem {
-                    Text("About")
-                    Image(systemName: "star")
+                    VStack {
+                        Image(systemName: "graduationcap")
+                        Text("About")
+                    }
                 }
                 .tag(2)
         }

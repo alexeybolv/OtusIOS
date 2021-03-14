@@ -31,13 +31,15 @@ extension Food: Identifiable {
 
 struct FoodScreenView: View {
 
-    @ObservedObject var viewModel: FoodScreenViewModel = .init()
+    @EnvironmentObject var viewModel: FoodScreenViewModel
+    @EnvironmentObject var router: Router
 
     @State var favesShowed: Bool = false
 
     var body: some View {
         NavigationView {
             List {
+                QuickButtons()
                 FilterView(favesShowed: $favesShowed)
                 ForEach(viewModel.foods) { item in
                     if !favesShowed || item.isFave {
@@ -46,6 +48,41 @@ struct FoodScreenView: View {
                 }
             }
             .navigationTitle("Food")
+            .navigationBarTitleDisplayMode(.inline)
+            .overlay(NavigationLink(destination: FoodDetailsScreenView(emoji: "🥜"),
+                     isActive: $router.isSuperFoodShowed) {
+                EmptyView().hidden()
+            })
+        }
+    }
+}
+
+struct QuickButtons: View {
+
+    var body: some View {
+        HStack {
+            Spacer()
+            Image(systemName: "function")
+                .padding()
+                .frame(width: 50, height: 50)
+                .background(Color.gray)
+                .foregroundColor(.white)
+                .cornerRadius(8)
+            Spacer()
+            Image(systemName: "airplane")
+                .padding()
+                .frame(width: 50, height: 50)
+                .background(Color.gray)
+                .foregroundColor(.white)
+                .cornerRadius(8)
+            Spacer()
+            Image(systemName: "ipod")
+                .padding()
+                .frame(width: 50, height: 50)
+                .background(Color.gray)
+                .foregroundColor(.white)
+                .cornerRadius(8)
+            Spacer()
         }
     }
 }

@@ -9,8 +9,21 @@ import SwiftUI
 
 struct DashboardScreenView: View {
 
+    @EnvironmentObject var router: Router
+
     var body: some View {
-        Text("Start Page")
+        VStack {
+            Text("Start Page")
+            Button(action: {
+                router.selection = 1
+                router.isSuperFoodShowed = true
+            }) {
+                Text("Show super food")
+            }
+            .padding()
+            .background(Color.pink)
+            .foregroundColor(.white)
+        }
     }
 }
 
