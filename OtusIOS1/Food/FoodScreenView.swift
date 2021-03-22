@@ -47,7 +47,7 @@ struct FoodScreenView: View {
                     }
                 }
             }
-            .navigationTitle("Food")
+            .navigationTitle("Buttons and Food")
             .navigationBarTitleDisplayMode(.inline)
             .overlay(NavigationLink(destination: FoodDetailsScreenView(emoji: "🥜"),
                      isActive: $router.isSuperFoodShowed) {

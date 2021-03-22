@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,8 @@
 		1375A1F425FE5C5B00885BC5 /* FoodDetailsScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1375A1F325FE5C5B00885BC5 /* FoodDetailsScreenView.swift */; };
 		1375A1F725FE5CE700885BC5 /* DashboardScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1375A1F625FE5CE700885BC5 /* DashboardScreenView.swift */; };
 		1375A1FC25FEA27B00885BC5 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1375A1FB25FEA27B00885BC5 /* Router.swift */; };
+		139DF53C26094AC700736ABE /* CatalogScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139DF53B26094AC700736ABE /* CatalogScreenView.swift */; };
+		139DF543260955BC00736ABE /* UIComponents in Frameworks */ = {isa = PBXBuildFile; productRef = 139DF542260955BC00736ABE /* UIComponents */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		1375A1F325FE5C5B00885BC5 /* FoodDetailsScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailsScreenView.swift; sourceTree = "<group>"; };
 		1375A1F625FE5CE700885BC5 /* DashboardScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardScreenView.swift; sourceTree = "<group>"; };
 		1375A1FB25FEA27B00885BC5 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		139DF53B26094AC700736ABE /* CatalogScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogScreenView.swift; sourceTree = "<group>"; };
+		139DF53F260955A500736ABE /* UIComponents */ = {isa = PBXFileReference; lastKnownFileType = text; path = UIComponents; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				139DF543260955BC00736ABE /* UIComponents in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,8 +61,10 @@
 		135E491825FE202E00E102EF = {
 			isa = PBXGroup;
 			children = (
+				139DF53E2609554700736ABE /* Modules */,
 				135E492325FE202E00E102EF /* OtusIOS1 */,
 				135E492225FE202E00E102EF /* Products */,
+				139DF541260955BC00736ABE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,13 +79,14 @@
 		135E492325FE202E00E102EF /* OtusIOS1 */ = {
 			isa = PBXGroup;
 			children = (
-				1375A1FE25FEA2BB00885BC5 /* Services */,
 				135E492425FE202E00E102EF /* OtusIOS1App.swift */,
+				1375A1FE25FEA2BB00885BC5 /* Services */,
+				139DF53626094A5700736ABE /* Dashboard */,
+				139DF53726094A7000736ABE /* Food */,
+				139DF53926094A8B00736ABE /* Catalog */,
+				139DF53826094A7E00736ABE /* About */,
 				135E492625FE202E00E102EF /* ContentView.swift */,
-				1375A1F625FE5CE700885BC5 /* DashboardScreenView.swift */,
-				1375A1EF25FE474900885BC5 /* FoodScreenView.swift */,
 				1375A1F325FE5C5B00885BC5 /* FoodDetailsScreenView.swift */,
-				1375A1EC25FE460B00885BC5 /* AboutScreenView.swift */,
 				135E492825FE203100E102EF /* Assets.xcassets */,
 				135E492D25FE203100E102EF /* Info.plist */,
 				1350ACB225FEB0B2000E56D6 /* Views */,
@@ -103,6 +111,53 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		139DF53626094A5700736ABE /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				1375A1F625FE5CE700885BC5 /* DashboardScreenView.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		139DF53726094A7000736ABE /* Food */ = {
+			isa = PBXGroup;
+			children = (
+				1375A1EF25FE474900885BC5 /* FoodScreenView.swift */,
+			);
+			path = Food;
+			sourceTree = "<group>";
+		};
+		139DF53826094A7E00736ABE /* About */ = {
+			isa = PBXGroup;
+			children = (
+				1375A1EC25FE460B00885BC5 /* AboutScreenView.swift */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
+		139DF53926094A8B00736ABE /* Catalog */ = {
+			isa = PBXGroup;
+			children = (
+				139DF53B26094AC700736ABE /* CatalogScreenView.swift */,
+			);
+			path = Catalog;
+			sourceTree = "<group>";
+		};
+		139DF53E2609554700736ABE /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				139DF53F260955A500736ABE /* UIComponents */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		139DF541260955BC00736ABE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,6 +174,9 @@
 			dependencies = (
 			);
 			name = OtusIOS1;
+			packageProductDependencies = (
+				139DF542260955BC00736ABE /* UIComponents */,
+			);
 			productName = OtusIOS1;
 			productReference = 135E492125FE202E00E102EF /* OtusIOS1.app */;
 			productType = "com.apple.product-type.application";
@@ -178,6 +236,7 @@
 				1375A1FC25FEA27B00885BC5 /* Router.swift in Sources */,
 				1350ACB425FEB0CE000E56D6 /* ActivityIndicator.swift in Sources */,
 				1375A1F025FE474900885BC5 /* FoodScreenView.swift in Sources */,
+				139DF53C26094AC700736ABE /* CatalogScreenView.swift in Sources */,
 				135E492525FE202E00E102EF /* OtusIOS1App.swift in Sources */,
 				1375A1F725FE5CE700885BC5 /* DashboardScreenView.swift in Sources */,
 			);
@@ -368,6 +427,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		139DF542260955BC00736ABE /* UIComponents */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UIComponents;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 135E491925FE202E00E102EF /* Project object */;
 }
