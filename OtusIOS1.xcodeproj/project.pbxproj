@@ -19,6 +19,7 @@
 		1375A1FC25FEA27B00885BC5 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1375A1FB25FEA27B00885BC5 /* Router.swift */; };
 		139DF53C26094AC700736ABE /* CatalogScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139DF53B26094AC700736ABE /* CatalogScreenView.swift */; };
 		139DF543260955BC00736ABE /* UIComponents in Frameworks */ = {isa = PBXBuildFile; productRef = 139DF542260955BC00736ABE /* UIComponents */; };
+		13EFB1A2260AB9F20070DBE7 /* AnyTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EFB1A1260AB9F20070DBE7 /* AnyTransition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		1375A1FB25FEA27B00885BC5 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		139DF53B26094AC700736ABE /* CatalogScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogScreenView.swift; sourceTree = "<group>"; };
 		139DF53F260955A500736ABE /* UIComponents */ = {isa = PBXFileReference; lastKnownFileType = text; path = UIComponents; sourceTree = SOURCE_ROOT; };
+		13EFB1A1260AB9F20070DBE7 /* AnyTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyTransition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				139DF53726094A7000736ABE /* Food */,
 				139DF53926094A8B00736ABE /* Catalog */,
 				139DF53826094A7E00736ABE /* About */,
+				13EFB1A0260AB9CD0070DBE7 /* Extensions */,
 				135E492625FE202E00E102EF /* ContentView.swift */,
 				1375A1F325FE5C5B00885BC5 /* FoodDetailsScreenView.swift */,
 				135E492825FE203100E102EF /* Assets.xcassets */,
@@ -156,6 +159,14 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		13EFB1A0260AB9CD0070DBE7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				13EFB1A1260AB9F20070DBE7 /* AnyTransition.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,6 +250,7 @@
 				139DF53C26094AC700736ABE /* CatalogScreenView.swift in Sources */,
 				135E492525FE202E00E102EF /* OtusIOS1App.swift in Sources */,
 				1375A1F725FE5CE700885BC5 /* DashboardScreenView.swift in Sources */,
+				13EFB1A2260AB9F20070DBE7 /* AnyTransition.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
