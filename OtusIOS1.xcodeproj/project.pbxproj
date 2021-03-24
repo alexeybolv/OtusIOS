@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1350ACB425FEB0CE000E56D6 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1350ACB325FEB0CE000E56D6 /* ActivityIndicator.swift */; };
 		135E492525FE202E00E102EF /* OtusIOS1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135E492425FE202E00E102EF /* OtusIOS1App.swift */; };
 		135E492725FE202E00E102EF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135E492625FE202E00E102EF /* ContentView.swift */; };
 		135E492925FE203100E102EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 135E492825FE203100E102EF /* Assets.xcassets */; };
@@ -21,11 +20,13 @@
 		139DF543260955BC00736ABE /* UIComponents in Frameworks */ = {isa = PBXBuildFile; productRef = 139DF542260955BC00736ABE /* UIComponents */; };
 		13A50348260BCDBA0047F31E /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = 13A50347260BCDBA0047F31E /* Networking */; };
 		13A5034C260BD2A80047F31E /* RecipesScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A5034B260BD2A80047F31E /* RecipesScreenView.swift */; };
+		13A5034F260BEFA90047F31E /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A5034E260BEFA90047F31E /* Optional.swift */; };
+		13A50352260BF1810047F31E /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A50351260BF1810047F31E /* Collection.swift */; };
+		13A50359260BFD1B0047F31E /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A50358260BFD1B0047F31E /* String.swift */; };
 		13EFB1A2260AB9F20070DBE7 /* AnyTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EFB1A1260AB9F20070DBE7 /* AnyTransition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1350ACB325FEB0CE000E56D6 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		135E492125FE202E00E102EF /* OtusIOS1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OtusIOS1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		135E492425FE202E00E102EF /* OtusIOS1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtusIOS1App.swift; sourceTree = "<group>"; };
 		135E492625FE202E00E102EF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -41,6 +42,9 @@
 		139DF53F260955A500736ABE /* UIComponents */ = {isa = PBXFileReference; lastKnownFileType = folder; name = UIComponents; path = Modules/UIComponents; sourceTree = SOURCE_ROOT; };
 		13A50345260BCB820047F31E /* Networking */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Networking; sourceTree = "<group>"; };
 		13A5034B260BD2A80047F31E /* RecipesScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesScreenView.swift; sourceTree = "<group>"; };
+		13A5034E260BEFA90047F31E /* Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
+		13A50351260BF1810047F31E /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
+		13A50358260BFD1B0047F31E /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		13EFB1A1260AB9F20070DBE7 /* AnyTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyTransition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -57,14 +61,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1350ACB225FEB0B2000E56D6 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				1350ACB325FEB0CE000E56D6 /* ActivityIndicator.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		135E491825FE202E00E102EF = {
 			isa = PBXGroup;
 			children = (
@@ -98,7 +94,6 @@
 				1375A1F325FE5C5B00885BC5 /* FoodDetailsScreenView.swift */,
 				135E492825FE203100E102EF /* Assets.xcassets */,
 				135E492D25FE203100E102EF /* Info.plist */,
-				1350ACB225FEB0B2000E56D6 /* Views */,
 				135E492A25FE203100E102EF /* Preview Content */,
 			);
 			path = OtusIOS1;
@@ -180,6 +175,9 @@
 			isa = PBXGroup;
 			children = (
 				13EFB1A1260AB9F20070DBE7 /* AnyTransition.swift */,
+				13A5034E260BEFA90047F31E /* Optional.swift */,
+				13A50351260BF1810047F31E /* Collection.swift */,
+				13A50358260BFD1B0047F31E /* String.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -258,16 +256,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				1375A1ED25FE460B00885BC5 /* AboutScreenView.swift in Sources */,
+				13A50359260BFD1B0047F31E /* String.swift in Sources */,
 				1375A1F425FE5C5B00885BC5 /* FoodDetailsScreenView.swift in Sources */,
 				135E492725FE202E00E102EF /* ContentView.swift in Sources */,
 				1375A1FC25FEA27B00885BC5 /* Router.swift in Sources */,
-				1350ACB425FEB0CE000E56D6 /* ActivityIndicator.swift in Sources */,
 				13A5034C260BD2A80047F31E /* RecipesScreenView.swift in Sources */,
+				13A50352260BF1810047F31E /* Collection.swift in Sources */,
 				1375A1F025FE474900885BC5 /* FoodScreenView.swift in Sources */,
 				139DF53C26094AC700736ABE /* CatalogScreenView.swift in Sources */,
 				135E492525FE202E00E102EF /* OtusIOS1App.swift in Sources */,
 				1375A1F725FE5CE700885BC5 /* DashboardScreenView.swift in Sources */,
 				13EFB1A2260AB9F20070DBE7 /* AnyTransition.swift in Sources */,
+				13A5034F260BEFA90047F31E /* Optional.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
