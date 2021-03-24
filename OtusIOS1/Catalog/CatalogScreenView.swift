@@ -7,6 +7,7 @@
 
 import SwiftUI
 import UIComponents
+import Networking
 
 struct CatalogScreenView: View {
     var body: some View {

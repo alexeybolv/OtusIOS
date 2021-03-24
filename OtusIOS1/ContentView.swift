@@ -37,6 +37,14 @@ struct ContentView: View {
                     }
                 }
                 .tag(2)
+            RecipesScreenView()
+                .tabItem {
+                    VStack {
+                        Image(systemName: "book")
+                        Text("Recipes")
+                    }
+                }
+                .tag(3)
             AboutScreenView()
                 .tabItem {
                     VStack {
@@ -44,7 +52,7 @@ struct ContentView: View {
                         Text("About")
                     }
                 }
-                .tag(3)
+                .tag(4)
         }
     }
 }

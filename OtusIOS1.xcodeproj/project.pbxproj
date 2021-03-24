@@ -19,6 +19,8 @@
 		1375A1FC25FEA27B00885BC5 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1375A1FB25FEA27B00885BC5 /* Router.swift */; };
 		139DF53C26094AC700736ABE /* CatalogScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139DF53B26094AC700736ABE /* CatalogScreenView.swift */; };
 		139DF543260955BC00736ABE /* UIComponents in Frameworks */ = {isa = PBXBuildFile; productRef = 139DF542260955BC00736ABE /* UIComponents */; };
+		13A50348260BCDBA0047F31E /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = 13A50347260BCDBA0047F31E /* Networking */; };
+		13A5034C260BD2A80047F31E /* RecipesScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A5034B260BD2A80047F31E /* RecipesScreenView.swift */; };
 		13EFB1A2260AB9F20070DBE7 /* AnyTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EFB1A1260AB9F20070DBE7 /* AnyTransition.swift */; };
 /* End PBXBuildFile section */
 
@@ -36,7 +38,9 @@
 		1375A1F625FE5CE700885BC5 /* DashboardScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardScreenView.swift; sourceTree = "<group>"; };
 		1375A1FB25FEA27B00885BC5 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		139DF53B26094AC700736ABE /* CatalogScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogScreenView.swift; sourceTree = "<group>"; };
-		139DF53F260955A500736ABE /* UIComponents */ = {isa = PBXFileReference; lastKnownFileType = text; path = UIComponents; sourceTree = SOURCE_ROOT; };
+		139DF53F260955A500736ABE /* UIComponents */ = {isa = PBXFileReference; lastKnownFileType = folder; name = UIComponents; path = Modules/UIComponents; sourceTree = SOURCE_ROOT; };
+		13A50345260BCB820047F31E /* Networking */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Networking; sourceTree = "<group>"; };
+		13A5034B260BD2A80047F31E /* RecipesScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesScreenView.swift; sourceTree = "<group>"; };
 		13EFB1A1260AB9F20070DBE7 /* AnyTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyTransition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -45,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13A50348260BCDBA0047F31E /* Networking in Frameworks */,
 				139DF543260955BC00736ABE /* UIComponents in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -86,6 +91,7 @@
 				139DF53626094A5700736ABE /* Dashboard */,
 				139DF53726094A7000736ABE /* Food */,
 				139DF53926094A8B00736ABE /* Catalog */,
+				13A5034A260BD28C0047F31E /* Recipes */,
 				139DF53826094A7E00736ABE /* About */,
 				13EFB1A0260AB9CD0070DBE7 /* Extensions */,
 				135E492625FE202E00E102EF /* ContentView.swift */,
@@ -149,6 +155,7 @@
 		139DF53E2609554700736ABE /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				13A50345260BCB820047F31E /* Networking */,
 				139DF53F260955A500736ABE /* UIComponents */,
 			);
 			path = Modules;
@@ -159,6 +166,14 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		13A5034A260BD28C0047F31E /* Recipes */ = {
+			isa = PBXGroup;
+			children = (
+				13A5034B260BD2A80047F31E /* RecipesScreenView.swift */,
+			);
+			path = Recipes;
 			sourceTree = "<group>";
 		};
 		13EFB1A0260AB9CD0070DBE7 /* Extensions */ = {
@@ -187,6 +202,7 @@
 			name = OtusIOS1;
 			packageProductDependencies = (
 				139DF542260955BC00736ABE /* UIComponents */,
+				13A50347260BCDBA0047F31E /* Networking */,
 			);
 			productName = OtusIOS1;
 			productReference = 135E492125FE202E00E102EF /* OtusIOS1.app */;
@@ -246,6 +262,7 @@
 				135E492725FE202E00E102EF /* ContentView.swift in Sources */,
 				1375A1FC25FEA27B00885BC5 /* Router.swift in Sources */,
 				1350ACB425FEB0CE000E56D6 /* ActivityIndicator.swift in Sources */,
+				13A5034C260BD2A80047F31E /* RecipesScreenView.swift in Sources */,
 				1375A1F025FE474900885BC5 /* FoodScreenView.swift in Sources */,
 				139DF53C26094AC700736ABE /* CatalogScreenView.swift in Sources */,
 				135E492525FE202E00E102EF /* OtusIOS1App.swift in Sources */,
@@ -444,6 +461,10 @@
 		139DF542260955BC00736ABE /* UIComponents */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = UIComponents;
+		};
+		13A50347260BCDBA0047F31E /* Networking */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Networking;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
