@@ -103,7 +103,7 @@ struct RecipesScreenView: View {
                         }
                     }
                 } // List
-            }
+            }.navigationTitle("Recipes")
         }
     }
 }
