@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13122A5E261E3E1400AF4276 /* GeometryFXModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13122A5D261E3E1400AF4276 /* GeometryFXModalView.swift */; };
+		13122A61261E472E00AF4276 /* DiagramModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13122A60261E472E00AF4276 /* DiagramModalView.swift */; };
 		135E492525FE202E00E102EF /* OtusIOS1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135E492425FE202E00E102EF /* OtusIOS1App.swift */; };
 		135E492725FE202E00E102EF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135E492625FE202E00E102EF /* ContentView.swift */; };
 		135E492925FE203100E102EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 135E492825FE203100E102EF /* Assets.xcassets */; };
@@ -23,10 +25,13 @@
 		13A5034F260BEFA90047F31E /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A5034E260BEFA90047F31E /* Optional.swift */; };
 		13A50352260BF1810047F31E /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A50351260BF1810047F31E /* Collection.swift */; };
 		13A50359260BFD1B0047F31E /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A50358260BFD1B0047F31E /* String.swift */; };
+		13A981C3261DF7CA0003C75D /* AnimationModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A981C2261DF7CA0003C75D /* AnimationModalView.swift */; };
 		13EFB1A2260AB9F20070DBE7 /* AnyTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EFB1A1260AB9F20070DBE7 /* AnyTransition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		13122A5D261E3E1400AF4276 /* GeometryFXModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryFXModalView.swift; sourceTree = "<group>"; };
+		13122A60261E472E00AF4276 /* DiagramModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagramModalView.swift; sourceTree = "<group>"; };
 		135E492125FE202E00E102EF /* OtusIOS1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OtusIOS1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		135E492425FE202E00E102EF /* OtusIOS1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtusIOS1App.swift; sourceTree = "<group>"; };
 		135E492625FE202E00E102EF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -45,6 +50,7 @@
 		13A5034E260BEFA90047F31E /* Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
 		13A50351260BF1810047F31E /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
 		13A50358260BFD1B0047F31E /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		13A981C2261DF7CA0003C75D /* AnimationModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationModalView.swift; sourceTree = "<group>"; };
 		13EFB1A1260AB9F20070DBE7 /* AnyTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyTransition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,6 +124,9 @@
 			isa = PBXGroup;
 			children = (
 				1375A1F625FE5CE700885BC5 /* DashboardScreenView.swift */,
+				13A981C2261DF7CA0003C75D /* AnimationModalView.swift */,
+				13122A5D261E3E1400AF4276 /* GeometryFXModalView.swift */,
+				13122A60261E472E00AF4276 /* DiagramModalView.swift */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -261,12 +270,15 @@
 				135E492725FE202E00E102EF /* ContentView.swift in Sources */,
 				1375A1FC25FEA27B00885BC5 /* Router.swift in Sources */,
 				13A5034C260BD2A80047F31E /* RecipesScreenView.swift in Sources */,
+				13122A5E261E3E1400AF4276 /* GeometryFXModalView.swift in Sources */,
 				13A50352260BF1810047F31E /* Collection.swift in Sources */,
 				1375A1F025FE474900885BC5 /* FoodScreenView.swift in Sources */,
 				139DF53C26094AC700736ABE /* CatalogScreenView.swift in Sources */,
 				135E492525FE202E00E102EF /* OtusIOS1App.swift in Sources */,
 				1375A1F725FE5CE700885BC5 /* DashboardScreenView.swift in Sources */,
+				13A981C3261DF7CA0003C75D /* AnimationModalView.swift in Sources */,
 				13EFB1A2260AB9F20070DBE7 /* AnyTransition.swift in Sources */,
+				13122A61261E472E00AF4276 /* DiagramModalView.swift in Sources */,
 				13A5034F260BEFA90047F31E /* Optional.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
