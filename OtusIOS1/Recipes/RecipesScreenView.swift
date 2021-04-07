@@ -11,18 +11,34 @@ import UIComponents
 
 final class RecipesPuppyViewModel: ObservableObject {
 
+    enum Dish: String, CaseIterable {
+        case salad
+        case soup
+    }
+
     @Published private(set) var items: [Recipe] = .init()
     @Published private(set) var page: Int = 0
     @Published private(set) var isPageLoading: Bool = false
+
+    private var dish: Dish?
+
+    func getItems(dish: Dish) -> [Recipe] {
+        if self.dish != dish {
+            page = 0
+            items.removeAll()
+            self.dish = dish
+            loadPage()
+        }
+        return items
+    }
 
     func loadPage() {
         guard isPageLoading == false else { return }
         isPageLoading = true
         page += 1
-        RecipeAPI.getRecipe(i: "potato", q: "salad", p: page) { (response, error) in
+        RecipeAPI.getRecipe(i: "potato", q: dish?.rawValue ?? "", p: page) { (response, error) in
             if let results = response?.results {
                 self.items.append(contentsOf: results)
-                print(results)
             }
             self.isPageLoading = false
         }
@@ -59,25 +75,34 @@ struct RecipeCell: View {
 struct RecipesScreenView: View {
 
     @ObservedObject var recipesPuppyViewModel: RecipesPuppyViewModel = .init()
+    @State private var selectedDish: RecipesPuppyViewModel.Dish = .salad
 
     var body: some View {
         NavigationView {
-            List(recipesPuppyViewModel.items) { item in
-                VStack(alignment: .leading) {
-                    NavigationLink(destination: RecipeDetailsScreenView()) {
-                        RecipeCell(item: item)
-                            .environmentObject(recipesPuppyViewModel)
-                            .onAppear() {
-                                if recipesPuppyViewModel.items.isLast(item) {
-                                    recipesPuppyViewModel.loadPage()
-                                }
-                            }
+            VStack {
+                HStack {
+                    Spacer(minLength: 30)
+                    Picker(selection: $selectedDish, label: Text("")) {
+                        ForEach(RecipesPuppyViewModel.Dish.allCases, id: \.self) {
+                            Text($0.rawValue)
+                        }
                     }
+                    .pickerStyle(SegmentedPickerStyle())
+                    Spacer(minLength: 30)
                 }
-            } // List
-            .navigationTitle("Recipes")
-            .onAppear() {
-                recipesPuppyViewModel.loadPage()
+                List(recipesPuppyViewModel.getItems(dish: selectedDish)) { item in
+                    VStack(alignment: .leading) {
+                        NavigationLink(destination: RecipeDetailsScreenView(recipe: item)) {
+                            RecipeCell(item: item)
+                                .environmentObject(recipesPuppyViewModel)
+                                .onAppear() {
+                                    if recipesPuppyViewModel.items.isLast(item) {
+                                        recipesPuppyViewModel.loadPage()
+                                    }
+                                }
+                        }
+                    }
+                } // List
             }
         }
     }
@@ -85,9 +110,38 @@ struct RecipesScreenView: View {
 
 struct RecipeDetailsScreenView: View {
 
+    let recipe: Recipe
+
     var body: some View {
-        Text("🍓")
-            .font(Font.system(size: 200.0))
+        VStack {
+            Text(recipe.title ?? "")
+                .font(Font.system(size: 32.0, weight: .bold))
+                .multilineTextAlignment(.center)
+            List {
+                Section(header: Text("Ingredients")) {
+                    Text(recipe.ingredients ?? "")
+                        .font(Font.system(size: 20.0))
+                }
+                Section(header: Text("Web")) {
+                    NavigationLink(destination: RecipeWebScreenView(recipe: recipe)) {
+                        Text(recipe.href)
+                            .font(Font.system(size: 20.0))
+                            .foregroundColor(.blue)
+                    }
+                }
+            }
+        }
+    }
+}
+
+struct RecipeWebScreenView: View {
+
+    let recipe: Recipe
+
+    var body: some View {
+        if let url = URL(string: recipe.href) {
+            Webview(url: url)
+        }
     }
 }
 

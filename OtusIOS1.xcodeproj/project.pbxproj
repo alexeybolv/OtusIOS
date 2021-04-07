@@ -91,7 +91,6 @@
 				139DF53826094A7E00736ABE /* About */,
 				13EFB1A0260AB9CD0070DBE7 /* Extensions */,
 				135E492625FE202E00E102EF /* ContentView.swift */,
-				1375A1F325FE5C5B00885BC5 /* FoodDetailsScreenView.swift */,
 				135E492825FE203100E102EF /* Assets.xcassets */,
 				135E492D25FE203100E102EF /* Info.plist */,
 				135E492A25FE203100E102EF /* Preview Content */,
@@ -127,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				1375A1EF25FE474900885BC5 /* FoodScreenView.swift */,
+				1375A1F325FE5C5B00885BC5 /* FoodDetailsScreenView.swift */,
 			);
 			path = Food;
 			sourceTree = "<group>";
