@@ -39,15 +39,36 @@ struct FoodScreenView: View {
     var body: some View {
         NavigationView {
             List {
-                QuickButtons()
-                FilterView(favesShowed: $favesShowed)
-                ForEach(viewModel.foods) { item in
-                    if !favesShowed || item.isFave {
-                        FoodListCell(food: item)
+                Section(header: Text("Buttons"), footer: Text("Open Me!")) {
+                    QuickButtons()
+                    HStack {
+                        Button(action: {
+                            print("Button 1")
+                        }) {
+                            Text("Button 1")
+                        }
+                        Button(action: {
+                            print("Button 2")
+                        }) {
+                            Text("Button 2")
+                        }
+                        Button(action: {
+                            print("Button 3")
+                        }) {
+                            Text("Button 3")
+                        }
+                    }
+                }
+                Section(header: Text("Food")) {
+                    FilterView(favesShowed: $favesShowed)
+                    ForEach(viewModel.foods) { item in
+                        if !favesShowed || item.isFave {
+                            FoodListCell(food: item)
+                        }
                     }
                 }
             }
-            .navigationTitle("Food")
+            .navigationTitle("Buttons and Food")
             .navigationBarTitleDisplayMode(.inline)
             .overlay(NavigationLink(destination: FoodDetailsScreenView(emoji: "🥜"),
                      isActive: $router.isSuperFoodShowed) {
