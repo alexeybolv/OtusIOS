@@ -14,6 +14,8 @@
 		135E492725FE202E00E102EF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135E492625FE202E00E102EF /* ContentView.swift */; };
 		135E492925FE203100E102EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 135E492825FE203100E102EF /* Assets.xcassets */; };
 		135E492C25FE203100E102EF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 135E492B25FE203100E102EF /* Preview Assets.xcassets */; };
+		136C5EF826812AAA0066D734 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = 136C5EF726812AAA0066D734 /* Networking */; };
+		136C5EFA26812AE60066D734 /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136C5EF926812AE60066D734 /* Analytics.swift */; };
 		1375A1ED25FE460B00885BC5 /* AboutScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1375A1EC25FE460B00885BC5 /* AboutScreenView.swift */; };
 		1375A1F025FE474900885BC5 /* FoodScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1375A1EF25FE474900885BC5 /* FoodScreenView.swift */; };
 		1375A1F425FE5C5B00885BC5 /* FoodDetailsScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1375A1F325FE5C5B00885BC5 /* FoodDetailsScreenView.swift */; };
@@ -39,6 +41,7 @@
 		135E492825FE203100E102EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		135E492B25FE203100E102EF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		135E492D25FE203100E102EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		136C5EF926812AE60066D734 /* Analytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
 		1375A1EC25FE460B00885BC5 /* AboutScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutScreenView.swift; sourceTree = "<group>"; };
 		1375A1EF25FE474900885BC5 /* FoodScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodScreenView.swift; sourceTree = "<group>"; };
 		1375A1F325FE5C5B00885BC5 /* FoodDetailsScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailsScreenView.swift; sourceTree = "<group>"; };
@@ -59,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				136C5EF826812AAA0066D734 /* Networking in Frameworks */,
 				139DF543260955BC00736ABE /* UIComponents in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -115,6 +119,7 @@
 		1375A1FE25FEA2BB00885BC5 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				136C5EF926812AE60066D734 /* Analytics.swift */,
 				1375A1FB25FEA27B00885BC5 /* Router.swift */,
 			);
 			path = Services;
@@ -208,6 +213,7 @@
 			name = OtusIOS1;
 			packageProductDependencies = (
 				139DF542260955BC00736ABE /* UIComponents */,
+				136C5EF726812AAA0066D734 /* Networking */,
 			);
 			productName = OtusIOS1;
 			productReference = 135E492125FE202E00E102EF /* OtusIOS1.app */;
@@ -236,6 +242,9 @@
 				Base,
 			);
 			mainGroup = 135E491825FE202E00E102EF;
+			packageReferences = (
+				136C5EF626812AAA0066D734 /* XCRemoteSwiftPackageReference "Network" */,
+			);
 			productRefGroup = 135E492225FE202E00E102EF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -270,6 +279,7 @@
 				13A5034C260BD2A80047F31E /* RecipesScreenView.swift in Sources */,
 				13122A5E261E3E1400AF4276 /* GeometryFXModalView.swift in Sources */,
 				13A50352260BF1810047F31E /* Collection.swift in Sources */,
+				136C5EFA26812AE60066D734 /* Analytics.swift in Sources */,
 				1375A1F025FE474900885BC5 /* FoodScreenView.swift in Sources */,
 				139DF53C26094AC700736ABE /* CatalogScreenView.swift in Sources */,
 				135E492525FE202E00E102EF /* OtusIOS1App.swift in Sources */,
@@ -468,7 +478,23 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		136C5EF626812AAA0066D734 /* XCRemoteSwiftPackageReference "Network" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/alexeybolv/Network.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
+		136C5EF726812AAA0066D734 /* Networking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 136C5EF626812AAA0066D734 /* XCRemoteSwiftPackageReference "Network" */;
+			productName = Networking;
+		};
 		139DF542260955BC00736ABE /* UIComponents */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = UIComponents;

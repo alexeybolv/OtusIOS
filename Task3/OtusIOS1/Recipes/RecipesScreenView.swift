@@ -20,7 +20,13 @@ final class RecipesPuppyViewModel: ObservableObject {
     @Published private(set) var page: Int = 0
     @Published private(set) var isPageLoading: Bool = false
 
+    let analytics: Analytics
+
     private var dish: Dish?
+
+    init() {
+        self.analytics = Analytics.injected
+    }
 
     func getItems(dish: Dish) -> [Recipe] {
         if self.dish != dish {
@@ -36,6 +42,7 @@ final class RecipesPuppyViewModel: ObservableObject {
         guard isPageLoading == false else { return }
         isPageLoading = true
         page += 1
+        analytics.event(.apiCall)
         RecipeAPI.getRecipe(i: "potato", q: dish?.rawValue ?? "", p: page) { (response, error) in
             if let results = response?.results {
                 self.items.append(contentsOf: results)

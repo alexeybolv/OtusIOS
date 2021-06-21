@@ -19,12 +19,7 @@ final class ServiceLocator {
     // MARK: - Declaration
 
     func registerFirstServices() {
-        // REGISTERING SERVICES
-//        registerSingleton(singletonInstance: CoreSecureStorageService())
-//        registerSingleton(singletonInstance: Analytics())
-//        register(factory: {
-//            Obfuscator()
-//        })
+        registerSingleton(singletonInstance: Analytics())
     }
 
     // MARK: - Registration
